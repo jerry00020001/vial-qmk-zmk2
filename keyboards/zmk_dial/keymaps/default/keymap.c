@@ -13,24 +13,21 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#pragma once
-
-#include "quantum.h"
-
-/* This a shortcut to help you visually see your layout.
- *
- * The first section contains all of the arguments representing the physical
- * layout of the board and position of the keys.
- *
- * The second converts the arguments into a two-dimensional array which
- * represents the switch matrix.
- */
+#include QMK_KEYBOARD_H
 
 
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+ [0] = LAYOUT(
+   KC_A,
+ )
+};
 
-#define LAYOUT( \
-	k00 \
-) \
-{ \
-	{k00} \
-}
+
+#if defined(ENCODER_MAP_ENABLE)
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][1] = {
+    [_BASE] =   { ENCODER_CCW_CW(KC_VOLD, KC_VOLU)           },
+    [_LOWER] =  { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN) },
+    [_RAISE] =  { ENCODER_CCW_CW(RGB_VAD, RGB_VAI)           },
+    [_ADJUST] = { ENCODER_CCW_CW(RGB_RMOD, RGB_MOD)          },
+};
+#endif

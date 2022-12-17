@@ -1,3 +1,4 @@
+
 /* Copyright 2020 Ungodly Design <hello@ungodly.design>
  *
  * This program is free software: you can redistribute it and/or modify
@@ -26,7 +27,9 @@
 
 #define RGB_DI_PIN B1
 #define RGBLED_NUM 1
-#define RGBLIGHT_ANIMATIONS	
+// #define RGBLIGHT_ANIMATIONS	
+#define RGBLIGHT_EFFECT_BREATHING
+#define RGBLIGHT_EFFECT_RAINBOW_MOOD
 
 /* key matrix size */
 #define MATRIX_ROWS 2

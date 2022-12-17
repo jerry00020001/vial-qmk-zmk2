@@ -26,8 +26,9 @@
 
 #define RGB_DI_PIN B1
 #define RGBLED_NUM 1
-#define RGBLIGHT_ANIMATIONS	
-
+//#define RGBLIGHT_ANIMATIONS	
+#define RGBLIGHT_EFFECT_BREATHING
+#define RGBLIGHT_EFFECT_RAINBOW_MOOD
 
 /* key matrix size */
 #define MATRIX_ROWS 1

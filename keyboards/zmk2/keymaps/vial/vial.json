@@ -1,12 +1,12 @@
 {
-    "name": "Ziddy Makes (ZMK) 1 Key LED Macropad",
+    "name": "Ziddy Makes (ZMK) 2 Key Macropad",
     "vendorId": "0x7546",
     "productId": "0x4878",
     "lighting": "qmk_rgblight",
-    "matrix": {"rows": 1, "cols": 1},
+    "matrix": {"rows": 1, "cols": 2},
     "layouts":{
         "keymap":[
-            ["0,0"]
+            ["0,0","0,1"]
         ]
 
     }

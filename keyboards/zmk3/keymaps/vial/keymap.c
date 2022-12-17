@@ -1,4 +1,4 @@
-/* Copyright 2020 Ungodly Design <hello@ungodly.design>
+/* Copyright 2020 Alex Zidros
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -13,26 +13,22 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#pragma once
-
-#include "config_common.h"
-
-/* USB Device descriptor parameter */
-#define VENDOR_ID 0x7546   
-#define PRODUCT_ID 0x4879  
-#define DEVICE_VER 0x0002
-#define MANUFACTURER ZiddyMakes
-#define PRODUCT ZMK_1_KEY_LED
-
-#define RGB_DI_PIN B1
-#define RGBLED_NUM 5
+#include QMK_KEYBOARD_H
 
 
-/* key matrix size */
-#define MATRIX_ROWS 1
-#define MATRIX_COLS 1
-
-#define DIRECT_PINS { \
-    { D1 } \
-}
-#define UNUSED_PINS
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+/* Keymap _BL: (Base Layer) Default Numpad Layer
+ * ,-------------------.
+ * |LAYR| /  | *  |BACK |
+ * |----|----|----|-----|
+ * | 7  | 8  | 9  |  -  |
+ * |----|----|----|-----|
+ * | 4  | 5  | 6  |  +  |
+ * |----|----|----|-----|
+ * | 1  | 2  | 3  | En  |
+ * `--------------------'
+ */
+ [0] = LAYOUT(
+   KC_A, KC_B, KC_C
+ )
+};

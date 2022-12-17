@@ -13,4 +13,30 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#include "zmk_cube.h"
+#pragma once
+
+#include "quantum.h"
+
+/* This a shortcut to help you visually see your layout.
+ *
+ * The first section contains all of the arguments representing the physical
+ * layout of the board and position of the keys.
+ *
+ * The second converts the arguments into a two-dimensional array which
+ * represents the switch matrix.
+ */
+
+/* 4x4 numpad matrix layout
+   * ,---------.
+   * | 00 | 01 |
+   * |----|----|
+   * | 02 | 03 |
+   * `---------'
+ */
+
+#define LAYOUT( \
+	k00, k01, k02  \
+) \
+{ \
+	{k00, k01, k02 } \
+}

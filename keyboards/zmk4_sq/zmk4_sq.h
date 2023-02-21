@@ -1,4 +1,4 @@
-/*
+/* Copyright 2020 Ungodly Design <hello@ungodly.design>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,29 +15,30 @@
  */
 #pragma once
 
-#include "config_common.h"
+#include "quantum.h"
 
-/* USB Device descriptor parameter */
-#define VENDOR_ID 0x7546   //
-#define PRODUCT_ID 0x4878  // 
-#define DEVICE_VER 0x0002
-#define MANUFACTURER ZiddyMakes
-#define PRODUCT ZMK_DIAL
+/* This a shortcut to help you visually see your layout.
+ *
+ * The first section contains all of the arguments representing the physical
+ * layout of the board and position of the keys.
+ *
+ * The second converts the arguments into a two-dimensional array which
+ * represents the switch matrix.
+ */
 
-#define RGB_DI_PIN B1
-#define RGBLED_NUM 2
-#define RGBLIGHT_ANIMATIONS	
+/* 4x4 numpad matrix layout
+   * ,---------.
+   * | 00 | 01 |
+   * |----|----|
+   * | 02 | 03 |
+   * `---------'
+ */
 
-/* key matrix size */
-#define MATRIX_ROWS 1
-#define MATRIX_COLS 1
-
-#define ENCODERS_PAD_A { B4 }
-#define ENCODERS_PAD_B { B5 }
-
-#define DIRECT_PINS { \
-    { E6 }, \
+#define LAYOUT( \
+	k00, k01,  \
+	k02, k03 \
+) \
+{ \
+	{k00, k01 }, \
+	{k02, k03 } \
 }
-#define UNUSED_PINS
-
-

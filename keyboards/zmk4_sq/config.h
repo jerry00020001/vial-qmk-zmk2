@@ -1,4 +1,5 @@
-/*
+
+/* Copyright 2020 Ungodly Design <hello@ungodly.design>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,22 +23,28 @@
 #define PRODUCT_ID 0x4878  // 
 #define DEVICE_VER 0x0002
 #define MANUFACTURER ZiddyMakes
-#define PRODUCT ZMK_DIAL
+#define PRODUCT ZMK_4_KEY_SQ
 
 #define RGB_DI_PIN B1
 #define RGBLED_NUM 2
-#define RGBLIGHT_ANIMATIONS	
+// #define RGBLIGHT_ANIMATIONS	
+#define RGBLIGHT_EFFECT_BREATHING
+#define RGBLIGHT_EFFECT_RAINBOW_MOOD
 
 /* key matrix size */
-#define MATRIX_ROWS 1
-#define MATRIX_COLS 1
+#define MATRIX_ROWS 2
+#define MATRIX_COLS 2
 
-#define ENCODERS_PAD_A { B4 }
-#define ENCODERS_PAD_B { B5 }
+/*
+#define DIRECT_PINS { \
+    { D1, D0 }, \
+    { D7, E6 }, \
+}
+*/
 
 #define DIRECT_PINS { \
-    { E6 }, \
+    { D7, D1 }, \
+    { E6, D0 }, \
 }
+
 #define UNUSED_PINS
-
-

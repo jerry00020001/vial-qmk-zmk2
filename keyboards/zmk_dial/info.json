@@ -1,0 +1,12 @@
+{
+  "keyboard_name": "ZiddyMakes Dial",
+  "url": "",
+  "maintainer": "Ziddymakes",
+  "layouts": {
+    "LAYOUT=": {
+        "layout": [
+            {"x":0, "y":0}
+        ]
+    }
+  }
+}

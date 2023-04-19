@@ -1,23 +1,7 @@
 {
-    "keyboard_name": "Avalanche",
-    "manufacturer": "vitvlkv",
+    "keyboard_name": "Avalanche v3",
     "url": "https://github.com/vlkv/avalanche",
     "maintainer": "vlkv",
-    "usb": {
-        "vid": "0xCEE2",
-        "pid": "0x0003",
-        "device_version": "0.0.3"
-    },
-    "encoder": {
-        "rotary": [
-            {"pin_a": "B5", "pin_b": "F4", "resolution": 2}
-        ]
-    },
-    "split": {
-        "soft_serial_pin": "D2"
-    },
-    "processor": "atmega32u4",
-    "bootloader": "caterina",
     "layouts": {
         "LAYOUT": {
             "layout": [

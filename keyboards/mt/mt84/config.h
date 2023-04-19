@@ -15,6 +15,19 @@
   */
 #pragma once
 
+#include "config_common.h"
+
+/* USB Device descriptor parameter */
+#define VENDOR_ID       0x4D54  // "MT"
+#define PRODUCT_ID      0x0002
+#define DEVICE_VER      0x0001
+#define MANUFACTURER    MT
+#define PRODUCT         MT84
+
+
+/* key matrix size */
+#define MATRIX_ROWS 6
+#define MATRIX_COLS 15
 
 /*
  * Keyboard Matrix Assignments
@@ -28,6 +41,7 @@
  */
 #define MATRIX_ROW_PINS { D7, D6, D5, D3, D2, D4 }
 #define MATRIX_COL_PINS {B5, B6, C6, C7, F7, F6,F5, F4, F1, F0, B1, B2, B3, B7, E6 }
+#define UNUSED_PINS
 
 /* COL2ROW, ROW2COL*/
 #define DIODE_DIRECTION COL2ROW
@@ -36,7 +50,7 @@
 	#define RGB_MATRIX_KEYPRESSES
 	#define RGB_MATRIX_FRAMEBUFFER_EFFECTS
 	#define RGB_MATRIX_MAXIMUM_BRIGHTNESS 200
-    #define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_CYCLE_ALL
+    #define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_CYCLE_ALL
 	#define RGB_MATRIX_LED_PROCESS_LIMIT 20
 	#define RGB_MATRIX_LED_FLUSH_LIMIT 26
 	#define DRIVER_ADDR_1 0b1010000
@@ -47,7 +61,7 @@
     #define DRIVER_COUNT 2
 	#define DRIVER_1_LED_TOTAL 44
 	#define DRIVER_2_LED_TOTAL 40
-	#define RGB_MATRIX_LED_COUNT (DRIVER_1_LED_TOTAL + DRIVER_2_LED_TOTAL)
+	#define DRIVER_LED_TOTAL (DRIVER_1_LED_TOTAL + DRIVER_2_LED_TOTAL)
 
  // RGB Matrix Animation modes. Explicitly enabled
  // For full list of effects, see:
@@ -102,6 +116,7 @@
 
 #define RGB_DI_PIN B0
 #ifdef RGB_DI_PIN
+ //    define RGBLIGHT_ANIMATIONS
 #    define RGBLIGHT_EFFECT_STATIC_GRADIENT
 #    define RGBLIGHT_EFFECT_RAINBOW_SWIRL
 #    define RGBLIGHT_EFFECT_BREATHING
@@ -111,6 +126,9 @@
 #    define RGBLIGHT_VAL_STEP 8
 #    define RGBLIGHT_SLEEP
 #endif
+
+/* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
+#define DEBOUNCE 5
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE

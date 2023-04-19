@@ -17,6 +17,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+#include "config_common.h"
+
+/* USB Device descriptor parameter */
+#define VENDOR_ID    0xFEED
+#define PRODUCT_ID   0x2137
+#define DEVICE_VER   0x0001
+#define MANUFACTURER QMK
+
+/* key matrix size */
+#define MATRIX_ROWS 5
+#define MATRIX_COLS 6
 
 /*
  * Keyboard Matrix Assignments
@@ -28,6 +39,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
  */
+#define UNUSED_PINS
 
 #define DIODE_DIRECTION COL2ROW
 
@@ -57,6 +69,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#    define RGBLIGHT_EFFECT_RGB_TEST
 #    define RGBLIGHT_EFFECT_ALTERNATING
 #endif
+
+/* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
+#define DEBOUNCE 5
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE

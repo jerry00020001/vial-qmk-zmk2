@@ -1,16 +1,7 @@
 {
-    "keyboard_name": "rsKeys100",
-    "manufacturer": "ryanskidmore",
-    "usb": {
-        "vid": "0x7273",
-        "pid": "0x0064",
-        "device_version": "0.0.1"
-    },
-    "processor": "atmega32u4",
-    "bootloader": "atmel-dfu",
+    "keyboard_name": "rskeys100",
     "url": "",
     "maintainer": "ryanskidmore",
-    "community_layouts": ["fullsize_iso"],
     "layouts": {
         "LAYOUT_fullsize_iso": {
             "layout": [

@@ -1,15 +1,7 @@
 {
-    "keyboard_name": "N60A",
-    "manufacturer": "Nix Studio",
+    "keyboard_name": "Nix_N60A",
     "url": "",
     "maintainer": "Nix Studio",
-    "usb": {
-        "vid": "0x6E78",
-        "pid": "0x3630",
-        "device_version": "0.0.1"
-    },
-    "processor": "atmega32u4",
-    "bootloader": "atmel-dfu",
     "layouts": {
         "LAYOUT": {
             "layout": [

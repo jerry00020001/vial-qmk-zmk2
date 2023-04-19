@@ -2,10 +2,12 @@
 #    if defined(ENABLE_RGB_MATRIX_SOLID_REACTIVE_CROSS) || defined(ENABLE_RGB_MATRIX_SOLID_REACTIVE_MULTICROSS)
 
 #        ifdef ENABLE_RGB_MATRIX_SOLID_REACTIVE_CROSS
+#define RGB_MATRIX_EFFECT_SOLID_REACTIVE_CROSS
 RGB_MATRIX_EFFECT(SOLID_REACTIVE_CROSS)
 #        endif
 
 #        ifdef ENABLE_RGB_MATRIX_SOLID_REACTIVE_MULTICROSS
+#define RGB_MATRIX_EFFECT_SOLID_REACTIVE_MULTICROSS
 RGB_MATRIX_EFFECT(SOLID_REACTIVE_MULTICROSS)
 #        endif
 
@@ -19,9 +21,6 @@ static HSV SOLID_REACTIVE_CROSS_math(HSV hsv, int16_t dx, int16_t dy, uint8_t di
     dy              = dy * 16 > 255 ? 255 : dy * 16;
     effect += dx > dy ? dy : dx;
     if (effect > 255) effect = 255;
-#            ifdef RGB_MATRIX_SOLID_REACTIVE_GRADIENT_MODE
-    hsv.h = scale16by8(g_rgb_timer, qadd8(rgb_matrix_config.speed, 8) >> 4);
-#            endif
     hsv.v = qadd8(hsv.v, 255 - effect);
     return hsv;
 }

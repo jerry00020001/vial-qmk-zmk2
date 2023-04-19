@@ -1,0 +1,6 @@
+VIA_ENABLE = yes
+VIAL_ENABLE = yes
+VIAL_INSECURE = yes
+MOUSEKEY_ENABLE = no
+
+LTO_ENABLE = yes

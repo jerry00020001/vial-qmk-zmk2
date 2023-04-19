@@ -1,4 +1,4 @@
-/* Copyright 2022 Jason Wihardja
+/* Copyright 2021 Joe Maples <joe@maples.dev>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,6 +16,20 @@
 
 #pragma once
 
+#include "config_common.h"
+
+/* USB Device descriptor parameter */
+#define VENDOR_ID       0x04D8
+#define PRODUCT_ID      0x1337
+#define DEVICE_VER      0x0102
+
+#define MANUFACTURER        "Massdrop Inc."
+#define PRODUCT             "The Key V2"
+#define SERIAL_NUM          "Unavailable"
+
+/* key matrix size */
+#define MATRIX_ROWS 1
+#define MATRIX_COLS 3
 
 /*
  * Keyboard Matrix Assignments
@@ -27,21 +41,21 @@
 
 #define RGB_DI_PIN B1
 #define RGBLED_NUM 5
-#define RGBLIGHT_LED_MAP {4, 0, 1, 2, 3}
-#define RGBLIGHT_EFFECT_BREATHING
-#define RGBLIGHT_EFFECT_RAINBOW_MOOD
-#define RGBLIGHT_EFFECT_RAINBOW_SWIRL
-#define RGBLIGHT_EFFECT_SNAKE
-#define RGBLIGHT_EFFECT_KNIGHT
-#define RGBLIGHT_EFFECT_CHRISTMAS
-#define RGBLIGHT_EFFECT_STATIC_GRADIENT
-#define RGBLIGHT_EFFECT_RGB_TEST
-#define RGBLIGHT_EFFECT_ALTERNATING
-#define RGBLIGHT_EFFECT_TWINKLE
-#define RGBLIGHT_HUE_STEP 10
-#define RGBLIGHT_SAT_STEP 10
-#define RGBLIGHT_VAL_STEP 15
+#define RGBLIGHT_HUE_STEP 8
+#define RGBLIGHT_SAT_STEP 8
+#define RGBLIGHT_VAL_STEP 8
 #define RGBLIGHT_LIMIT_VAL 255 /* The maximum brightness level */
-#define RGBLIGHT_SLEEP /* If defined, the RGB lighting will be switched off when the host goes to sleep */
-#define RGBLIGHT_LAYERS /* Enable lighting layers */
-#define RGBLIGHT_LAYER_BLINK /* Enable lighting layer blink */
+#define RGBLIGHT_SLEEP  /* If defined, the RGB lighting will be switched off when the host goes to sleep */
+#define RGBLIGHT_ANIMATIONS
+
+/* Disable Mechanical locking support. */
+#ifdef LOCKING_SUPPORT_ENABLE
+#define LOCKING_SUPPORT_ENABLE
+#endif
+/* Disable Locking resynchronize hack */
+#ifdef LOCKING_RESYNC_ENABLE
+#undef LOCKING_RESYNC_ENABLE
+#endif
+
+/* Turn off music mode. */
+#define NO_MUSIC_MODE

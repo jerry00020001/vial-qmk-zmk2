@@ -1,4 +1,4 @@
-Click Green code button > Download ZIP \n
+Click Green code button > Download ZIP n\
 Copy to local PC where QMK is setup > replace all files
 Navigate to keyboard folder in terminal (Ex. 'cd qmk_firmware/keyboards/zmk2')
 Make changes to the keymap.c file in the keymaps folder using some text editor (Ex. zmk2/keymaps/vial)
